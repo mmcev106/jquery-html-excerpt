@@ -8,7 +8,7 @@ jQuery.fn.htmlExcerpt = function(maxVisibleChars, options) {
 	}
 
 	options = $.extend({
-		readMoreLinkText: '[read more]',
+		readMoreLinkText: '<div style="margin-top: 5px">[Read More...]</div>',
 	}, options)
 
 	var getCharsToTrim = function(){
