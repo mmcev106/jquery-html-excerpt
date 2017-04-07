@@ -45,7 +45,7 @@ jQuery.fn.htmlExcerpt = function(maxVisibleChars, options) {
 
 			if(lastNode.nodeType == 3){ // text nodes
 				if(lastNode.textContent.length == 0){
-					lastNode.remove()
+					$(lastNode).remove()
 				}
 				else{
 					var nodeCharsToTrim = Math.min(getCharsToTrim(), lastNode.length)
@@ -66,7 +66,7 @@ jQuery.fn.htmlExcerpt = function(maxVisibleChars, options) {
 				lastNode = $(lastNode)
 
 				if(lastNode.text().length == 0){
-					lastNode.remove()
+					$(lastNode).remove()
 				}
 				else if(limitVisibleChars(rootElement, lastNode)){
 					return true;
